@@ -8,7 +8,7 @@ import (
 	"github.com/getkin/kin-openapi/openapi3"
 )
 
-func (s *Service) buildToolOutputSchema(ctx context.Context, doc *openapi3.T, op *openapi3.Operation) json.RawMessage {
+func (s *Service) buildToolOutputSchema(ctx context.Context, doc *openapi3.T, op *openapi3.Operation) (json.RawMessage, bool) {
 	ctx, span := s.tracer.Start(ctx, "BuildToolOutputSchema")
 	defer span.End()
 
@@ -17,26 +17,40 @@ func (s *Service) buildToolOutputSchema(ctx context.Context, doc *openapi3.T, op
 	if op.Responses == nil {
 		s.logger.WarnContext(ctx, "no responses defined for operation", "op", op.OperationID)
 
-		return nil
+		return nil, false
 	}
 
 	responseRef := findSuccessResponse(op.Responses)
 	if responseRef == nil || responseRef.Value == nil {
-		return nil
+		return nil, false
 	}
 
 	resp := responseRef.Value
 
 	jsonContent, ok := resp.Content["application/json"]
 	if !ok || jsonContent.Schema == nil {
-		return nil
+		return nil, false
 	}
 
 	visited := make(map[*openapi3.Schema]bool)
 
 	schema := s.resolveSchema(doc, jsonContent.Schema, visited)
 	if schema == nil {
-		return nil
+		return nil, false
+	}
+
+	var wrapped bool
+
+	if schema.Type == nil || !schema.Type.Is("object") {
+		schema = &openapi3.Schema{
+			Type: &openapi3.Types{"object"},
+			Properties: openapi3.Schemas{
+				"result": &openapi3.SchemaRef{Value: schema},
+			},
+			Required: []string{"result"},
+		}
+
+		wrapped = true
 	}
 
 	b, err := json.Marshal(schema)
@@ -46,12 +60,12 @@ func (s *Service) buildToolOutputSchema(ctx context.Context, doc *openapi3.T, op
 			"error", err,
 		)
 
-		return nil
+		return nil, false
 	}
 
 	s.logger.InfoContext(ctx, "tool output schema successfully built", "operation", op.OperationID)
 
-	return json.RawMessage(b)
+	return json.RawMessage(b), wrapped
 }
 
 func findSuccessResponse(responses *openapi3.Responses) *openapi3.ResponseRef {

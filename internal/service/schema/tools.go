@@ -94,7 +94,7 @@ func (s *Service) buildTool(ctx context.Context, doc *openapi3.T, p, method stri
 	))
 
 	input := s.buildToolInputSchema(ctx, doc, op, pi)
-	output := s.buildToolOutputSchema(ctx, doc, op)
+	output, wrapOutput := s.buildToolOutputSchema(ctx, doc, op)
 	params := collectParams(op, pi)
 
 	hasBody := op.RequestBody != nil && op.RequestBody.Value != nil
@@ -108,6 +108,7 @@ func (s *Service) buildTool(ctx context.Context, doc *openapi3.T, p, method stri
 		OutputSchema: output,
 		Params:       params,
 		HasBody:      hasBody,
+		WrapOutput:   wrapOutput,
 	}
 }
 

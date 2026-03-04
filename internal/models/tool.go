@@ -18,4 +18,5 @@ type ToolDefinition struct {
 	OutputSchema json.RawMessage
 	Params       []ToolParam
 	HasBody      bool
+	WrapOutput   bool
 }

@@ -87,7 +87,14 @@ func initTelemetry(ctx context.Context, cfg *TelemetryConfig) (func(context.Cont
 		return nil, fmt.Errorf("create log exporter: %w", err)
 	}
 
-	lp := log.NewLoggerProvider(log.WithResource(res), log.WithProcessor(log.NewBatchProcessor(logExp)))
+	var logProcessor log.Processor
+	if endpoint != "" {
+		logProcessor = log.NewBatchProcessor(logExp)
+	} else {
+		logProcessor = log.NewSimpleProcessor(logExp)
+	}
+
+	lp := log.NewLoggerProvider(log.WithResource(res), log.WithProcessor(logProcessor))
 	shutdowns = append(shutdowns, lp.Shutdown)
 
 	// Global slog via otelslog bridge.

@@ -48,10 +48,13 @@ func (c *Controller) registerTool(ctx context.Context, server *mcpsdk.Server, td
 	)
 
 	t := &mcpsdk.Tool{
-		Name:         td.OperationID,
-		Description:  td.Description,
-		InputSchema:  td.InputSchema,
-		OutputSchema: td.OutputSchema,
+		Name:        td.OperationID,
+		Description: td.Description,
+		InputSchema: td.InputSchema,
+	}
+
+	if td.OutputSchema != nil {
+		t.OutputSchema = td.OutputSchema
 	}
 
 	mcpsdk.AddTool(server, t, c.toolHandler(td))
@@ -93,6 +96,10 @@ func (c *Controller) toolHandler(td *models.ToolDefinition) func(context.Context
 		var data any
 
 		if err := json.Unmarshal(body, &data); err == nil {
+			if td.WrapOutput && status >= 200 && status < 300 {
+				data = map[string]any{"result": data}
+			}
+
 			if c.enableTOON {
 				if encoded, err := toon.Marshal(data); err == nil {
 					text = string(encoded)
