@@ -15,6 +15,7 @@ Thumbs.db
 # Environment / secrets
 .env
 *.pem
+config.yaml
 
 # Test
 coverage.out

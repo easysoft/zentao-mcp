@@ -1,12 +1,15 @@
 port: ":9090"
 enable_toon: false
+
 telemetry:
-  endpoint: "localhost:4317"
+  endpoint: ""
   insecure: true
+
 servers:
-  - name: petstore
-    schema_url: "https://petstore3.swagger.io/api/v3/openapi.json"
-    base_url: "https://petstore3.swagger.io/api/v3"
+  - name: zentao
+    schema_url: "https://b7du.corp.cc/zentao-openapi.json"
+    base_url: "https://b7du.corp.cc/api.php/v1"
+    token: "22f73f5fc926a1515e1f27d752f494d4"
     allow:
       - methods: ["GET", "POST", "PUT", "DELETE"]
         regex: ".*"

@@ -4,9 +4,9 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 ENV CGO_ENABLED=0
-RUN go build -o openapi-mcp-server cmd/app/*
+RUN go build -o zentao-mcp cmd/app/*
 
 FROM alpine:3.21
-COPY --from=builder /app/openapi-mcp-server /openapi-mcp-server
+COPY --from=builder /app/zentao-mcp /zentao-mcp
 EXPOSE 8080
-CMD ["/openapi-mcp-server"]
+CMD ["/zentao-mcp"]
