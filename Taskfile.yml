@@ -1,0 +1,145 @@
+version: "3"
+
+vars:
+  APP_NAME: zentao-mcp
+  BUILD_DIR: ./bin
+  MAIN_PKG: ./cmd/app
+  VERSION:
+    sh: git describe --tags --always --dirty 2>/dev/null || echo dev
+
+env:
+  CGO_ENABLED: "0"
+
+tasks:
+  # 代码格式化
+  fmt:
+    desc: 格式化 Go 代码
+    cmds:
+      - |
+        echo "Running gofmt..."
+        gofmt -w -s .
+        echo "Running golangci-lint with --fix..."
+        golangci-lint run --fix --fast ./...
+
+  # 代码检查
+  lint:
+    desc: 运行代码静态检查
+    cmds:
+      - golangci-lint run ./...
+
+  # 清理构建目录
+  clean:
+    desc: 清理构建目录
+    cmds:
+      - rm -rf {{.BUILD_DIR}}
+      - mkdir -p {{.BUILD_DIR}}
+
+  # 本地构建（当前平台）
+  build:
+    desc: 构建当前平台的可执行文件
+    deps: [clean]
+    cmds:
+      - |
+        go build -ldflags='-s -w -X main.version={{.VERSION}}' -o {{.BUILD_DIR}}/{{.APP_NAME}} {{.MAIN_PKG}}
+        echo "Build complete: {{.BUILD_DIR}}/{{.APP_NAME}}"
+
+  # 构建所有平台
+  build:all:
+    desc: 构建所有平台的可执行文件
+    deps: [clean]
+    cmds:
+      - |
+        task build:linux-amd64
+        task build:linux-arm64
+        task build:darwin-amd64
+        task build:darwin-arm64
+        task build:windows-amd64
+        task build:windows-arm64
+        echo "All builds complete!"
+
+  # Linux AMD64
+  build:linux-amd64:
+    desc: 构建 Linux AMD64 版本
+    cmds:
+      - |
+        GOOS=linux GOARCH=amd64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-linux-amd64 {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-linux-amd64"
+
+  # Linux ARM64
+  build:linux-arm64:
+    desc: 构建 Linux ARM64 版本
+    cmds:
+      - |
+        GOOS=linux GOARCH=arm64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-linux-arm64 {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-linux-arm64"
+
+  # macOS AMD64 (Intel)
+  build:darwin-amd64:
+    desc: 构建 macOS AMD64 版本
+    cmds:
+      - |
+        GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-darwin-amd64 {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-darwin-amd64"
+
+  # macOS ARM64 (Apple Silicon)
+  build:darwin-arm64:
+    desc: 构建 macOS ARM64 版本
+    cmds:
+      - |
+        GOOS=darwin GOARCH=arm64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-darwin-arm64 {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-darwin-arm64"
+
+  # Windows AMD64
+  build:windows-amd64:
+    desc: 构建 Windows AMD64 版本
+    cmds:
+      - |
+        GOOS=windows GOARCH=amd64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-windows-amd64.exe {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-windows-amd64.exe"
+
+  # Windows ARM64
+  build:windows-arm64:
+    desc: 构建 Windows ARM64 版本
+    cmds:
+      - |
+        GOOS=windows GOARCH=arm64 go build -ldflags "-s -w -X main.version={{.VERSION}}" -o {{.BUILD_DIR}}/{{.APP_NAME}}-windows-arm64.exe {{.MAIN_PKG}}
+        echo "Built: {{.BUILD_DIR}}/{{.APP_NAME}}-windows-arm64.exe"
+
+  # 打包所有平台为压缩包
+  package:
+    desc: 打包所有平台的可执行文件
+    deps: [build:all]
+    cmds:
+      - task: compress
+
+  # 压缩打包
+  compress:
+    desc: 压缩各平台二进制文件
+    dir: "{{.BUILD_DIR}}"
+    cmds:
+      - |
+        # Linux
+        tar -czf {{.APP_NAME}}-linux-amd64.tar.gz {{.APP_NAME}}-linux-amd64
+        tar -czf {{.APP_NAME}}-linux-arm64.tar.gz {{.APP_NAME}}-linux-arm64
+        # macOS
+        tar -czf {{.APP_NAME}}-darwin-amd64.tar.gz {{.APP_NAME}}-darwin-amd64
+        tar -czf {{.APP_NAME}}-darwin-arm64.tar.gz {{.APP_NAME}}-darwin-arm64
+        # Windows
+        zip {{.APP_NAME}}-windows-amd64.zip {{.APP_NAME}}-windows-amd64.exe
+        zip {{.APP_NAME}}-windows-arm64.zip {{.APP_NAME}}-windows-arm64.exe
+        echo "Packaging complete!"
+        ls -lh *.tar.gz *.zip
+
+  # 开发运行
+  dev:
+    desc: 开发模式运行
+    cmds:
+      - go run {{.MAIN_PKG}} -config config.yaml
+
+  # 默认 显示帮助
+  default:
+    desc: 显示帮助信息
+    cmds:
+      - |
+        echo "Available tasks:"
+        task --list
