@@ -92,12 +92,18 @@ task package        # 打包所有平台
 
 #### 1. 获取凭证
 ```bash
-curl -X POST https://b7du.corp.cc/api.php/v1/tokens \
+# 禅道域名
+ZENTAO_DOMAIN="http://您的禅道域名"
+
+# 禅道API v1
+curl -X POST "${ZENTAO_DOMAIN}/api.php/v1/tokens" \
    -H "Content-Type: application/json" \
-   -d '{
-   "account": "用户名,
-   "password": "密码"
-   }'
+   -d '{"account":"用户名","password":"密码"}'
+
+# 禅道API v2
+curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
+   -H "Content-Type: application/json" \
+   -d '{"account":"用户名","password":"密码"}'
 ```
 
 #### 2.1 Claude Desktop 配置
