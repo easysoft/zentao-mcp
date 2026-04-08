@@ -111,7 +111,7 @@ curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
 }
 ```
 
-#### 2.2 CodeBuddy 配置
+#### 2.2 Cody Buddy 配置
 ```json
 {
   "mcpServers": {
@@ -121,6 +121,7 @@ curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
       "url": "http://127.0.0.1:9090/zentao/mcp",
       "timeout": 60000,
       "headers": {
+        // headers中优先级: token > Authorization
         "token": "318511bf858e6ee9e62ce4135990098d",
         "Authorization": ""
       }
