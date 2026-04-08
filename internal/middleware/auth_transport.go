@@ -9,7 +9,18 @@ type authTransport struct {
 func (t *authTransport) RoundTrip(req *http.Request) (*http.Response, error) {
 	r := req.Clone(req.Context())
 
-	r.Header.Set("Authorization", "Bearer "+GetAuthorization(req.Context()))
+	token := GetAuthorization(req.Context())
+	if token == "" {
+		return t.base.RoundTrip(r)
+	}
+
+	// 如果是通过自定义 token 头传入（如禅道），则转发为 token 头；
+	// 否则保留原有行为，转发为 Authorization: Bearer <token>。
+	if IsFromTokenHeader(req.Context()) {
+		r.Header.Set("token", token)
+	} else {
+		r.Header.Set("Authorization", "Bearer "+token)
+	}
 
 	return t.base.RoundTrip(r)
 }

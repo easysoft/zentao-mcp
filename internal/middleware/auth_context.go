@@ -7,6 +7,7 @@ import (
 )
 
 type authorizationContextKey struct{}
+type authorizationSourceKey struct{}
 
 // WithAuthorization stores the bearer token in the context.
 func WithAuthorization(ctx context.Context, token string) context.Context {
@@ -25,4 +26,19 @@ func GetAuthorization(ctx context.Context) string {
 	}
 
 	return token
+}
+
+// WithAuthorizationSource marks whether the token comes from the custom `token` header.
+func WithAuthorizationSource(ctx context.Context, fromTokenHeader bool) context.Context {
+	return context.WithValue(ctx, authorizationSourceKey{}, fromTokenHeader)
+}
+
+// IsFromTokenHeader reports whether the auth value was provided via the `token` header.
+func IsFromTokenHeader(ctx context.Context) bool {
+	v, ok := ctx.Value(authorizationSourceKey{}).(bool)
+	if !ok {
+		return false
+	}
+
+	return v
 }
