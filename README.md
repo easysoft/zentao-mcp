@@ -62,9 +62,7 @@ servers:
     schema_url: "https://b7du.corp.cc/zentao-openapi.json"
     # API 基础 URL
     base_url: "https://b7du.corp.cc/api.php/v1"
-    # API 通信的Token
-    token: ""
-    # 运行访问的规则
+    # 允许访问的规则
     allow:
       - methods: ["GET", "POST", "PUT", "DELETE"]
         regex: ".*"
@@ -95,12 +93,7 @@ task package        # 打包所有平台
 # 禅道域名
 ZENTAO_DOMAIN="http://您的禅道域名"
 
-# 禅道API v1
-curl -X POST "${ZENTAO_DOMAIN}/api.php/v1/tokens" \
-   -H "Content-Type: application/json" \
-   -d '{"account":"用户名","password":"密码"}'
-
-# 禅道API v2
+# 禅道API
 curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
    -H "Content-Type: application/json" \
    -d '{"account":"用户名","password":"密码"}'
@@ -118,22 +111,32 @@ curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
 }
 ```
 
-#### 2.2 Cody Buddy 配置
-
+#### 2.2 CodeBuddy 配置
 ```json
 {
   "mcpServers": {
     "zentao": {
       "disabled": false,
-      "type": "sse",
+      "type": "mcp",
       "url": "http://127.0.0.1:9090/zentao/mcp",
       "timeout": 60000,
       "headers": {
-        "Authorization": "xxx"
+        "token": "318511bf858e6ee9e62ce4135990098d",
+        "Authorization": ""
+      }
+    },
+    "gitfox": {
+      "disabled": false,
+      "type": "sse",
+      "url": "http://127.0.0.1:9090/gitfox/sse",
+      "timeout": 60000,
+      "headers": {
+        "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NzU2MjMwMDMsImlzcyI6IkdpdGZveCIsInBpZCI6NSwidGtuIjp7InR5cCI6InBhdCIsImlkIjo1fX0.JLjiPLmEXBmAvppW9-Rz8V_wqo5EWn6M_x2b8aDStI4"
       }
     }
   }
 }
+
 ```
 
 ## 四：支持的平台
