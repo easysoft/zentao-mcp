@@ -149,3 +149,5 @@ curl -X POST "${ZENTAO_DOMAIN}/api.php/v2/user/login" \
 ## 五：许可证
 
 MIT License
+
+本项目在 [openapi-mcp-server](https://github.com/merzzzl/openapi-mcp-server) 的基础上进行修改和扩展，原项目及本项目均依据 MIT 许可证发布。
