@@ -7,7 +7,7 @@ telemetry:
 
 servers:
   - name: zentao
-    schema_url: "https://b7du.corp.cc/zentao-openapi.json"
+    schema_url: "zentao-openapi.json 的完整路径"
     base_url: "https://b7du.corp.cc/api.php/v2"
     allow:
       - methods: ["GET", "POST", "PUT", "DELETE"]
