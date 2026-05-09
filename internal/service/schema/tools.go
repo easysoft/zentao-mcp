@@ -3,12 +3,15 @@ package schema
 import (
 	"context"
 	"fmt"
+	"regexp"
 	"sort"
 	"strings"
 
 	"github.com/getkin/kin-openapi/openapi3"
 	"github.com/merzzzl/openapi-mcp-server/internal/models"
 )
+
+var invalidToolNameChars = regexp.MustCompile(`[^A-Za-z0-9_]+`)
 
 // Tools extracts all API operations as tool definitions.
 func (s *Service) Tools(ctx context.Context) ([]models.ToolDefinition, error) {
@@ -142,7 +145,9 @@ func sanitizePathName(p string) string {
 	s = strings.ReplaceAll(s, "/", "_")
 	s = strings.ReplaceAll(s, "{", "")
 	s = strings.ReplaceAll(s, "}", "")
-	s = strings.ReplaceAll(s, "-", "_")
+	s = strings.ReplaceAll(s, ":", "")
+	s = invalidToolNameChars.ReplaceAllString(s, "_")
+	s = strings.Trim(s, "_")
 
 	return s
 }

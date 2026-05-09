@@ -122,11 +122,11 @@ func main() {
 
 		pattern := "/" + sc.Name
 
-		mcpH := mcp.NewStreamableHTTPHandler(func(*http.Request) *mcp.Server { return server }, nil)
+		mcpH := newStreamableMCPHandler(server)
 		sseH := mcp.NewSSEHandler(func(*http.Request) *mcp.Server { return server }, nil)
 
-		mux.Handle(pattern+"/mcp", middleware.NewAuthorizationHandler(mcpH))
-		mux.Handle(pattern+"/sse", middleware.NewAuthorizationHandler(sseH))
+		mux.Handle(pattern+"/mcp", middleware.NewLoggingHandler(middleware.NewAuthorizationHandler(mcpH)))
+		mux.Handle(pattern+"/sse", middleware.NewLoggingHandler(middleware.NewAuthorizationHandler(sseH)))
 
 		slog.InfoContext(ctx, "server registered", "name", sc.Name, "mcp", pattern+"/mcp", "sse", pattern+"/sse")
 	}
@@ -156,4 +156,11 @@ func main() {
 	if err := srv.Shutdown(sCtx); err != nil {
 		slog.ErrorContext(ctx, "failed to shutdown server", "error", err)
 	}
+}
+
+func newStreamableMCPHandler(server *mcp.Server) http.Handler {
+	return mcp.NewStreamableHTTPHandler(
+		func(*http.Request) *mcp.Server { return server },
+		&mcp.StreamableHTTPOptions{JSONResponse: true},
+	)
 }

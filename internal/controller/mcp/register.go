@@ -118,6 +118,11 @@ func (c *Controller) toolHandler(td *models.ToolDefinition) func(context.Context
 			},
 		}
 
-		return res, nil, nil
+		var structuredOutput any
+		if len(td.OutputSchema) > 0 && status >= 200 && status < 300 && data != nil {
+			structuredOutput = data
+		}
+
+		return res, structuredOutput, nil
 	}
 }

@@ -25,6 +25,7 @@ func (s *Service) Execute(ctx context.Context, td *models.ToolDefinition, in map
 	s.logger.InfoContext(ctx, "executing tool",
 		"path", td.Path,
 		"method", td.Method,
+		"input", redactInput(in),
 	)
 
 	u, err := url.Parse(s.baseURL)
@@ -57,6 +58,13 @@ func (s *Service) Execute(ctx context.Context, td *models.ToolDefinition, in map
 	}
 
 	u.RawQuery = q.Encode()
+
+	s.logger.InfoContext(ctx, "upstream request prepared",
+		"path", td.Path,
+		"method", td.Method,
+		"upstream_url", redactURL(u),
+		"upstream_query_params", redactQueryParams(q),
+	)
 
 	var bodyReader io.Reader
 
