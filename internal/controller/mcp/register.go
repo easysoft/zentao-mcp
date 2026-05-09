@@ -120,7 +120,7 @@ func (c *Controller) toolHandler(td *models.ToolDefinition) func(context.Context
 
 		var structuredOutput any
 		if len(td.OutputSchema) > 0 && status >= 200 && status < 300 && data != nil {
-			structuredOutput = data
+			structuredOutput = normalizeStructuredOutput(td.OutputSchema, data)
 		}
 
 		return res, structuredOutput, nil

@@ -40,6 +40,8 @@ func (s *Service) buildToolInputSchema(ctx context.Context, doc *openapi3.T, op 
 		visited := make(map[*openapi3.Schema]bool)
 
 		if prop := s.resolveSchema(doc, p.Value.Schema, visited); prop != nil {
+			prop = allowNumericStringParameter(prop, p.Value.In)
+
 			if p.Value.Description != "" {
 				prop.Description = p.Value.Description
 			}
