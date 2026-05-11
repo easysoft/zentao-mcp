@@ -14,7 +14,11 @@ func allowNumericStringParameter(schema *openapi3.Schema, paramIn string) *opena
 	}
 
 	cp := copySchemaScalars(schema)
-	cp.Type = &openapi3.Types{"string", "number"}
+	cp.Type = nil
+	cp.AnyOf = append(cp.AnyOf,
+		openapi3.NewStringSchema().NewRef(),
+		openapi3.NewFloat64Schema().NewRef(),
+	)
 
 	return cp
 }
