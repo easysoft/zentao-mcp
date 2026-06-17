@@ -591,7 +591,8 @@
                 ]
             }
         },
-        "/users/:userID": {
+        "/users/{userID}": {
+            "parameters": [{"name": "userID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "User"
@@ -1531,7 +1532,8 @@
                 ]
             }
         },
-        "/programs/:programID": {
+        "/programs/{programID}": {
+            "parameters": [{"name": "programID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Program"
@@ -2197,11 +2199,11 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "编号"
                                                     },
                                                     "program": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "所属项目集"
                                                     },
                                                     "name": {
@@ -2213,15 +2215,15 @@
                                                         "description": "产品代号"
                                                     },
                                                     "shadow": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "是否影子产品"
                                                     },
                                                     "bind": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "是否独立产品"
                                                     },
                                                     "line": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "产品线"
                                                     },
                                                     "type": {
@@ -2261,7 +2263,7 @@
                                                         "description": "工单负责人"
                                                     },
                                                     "workflowGroup": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                        "type": "string"
                                                     },
                                                     "acl": {
                                                         "type": "string",
@@ -2283,119 +2285,111 @@
                                                         "type": "string"
                                                     },
                                                     "draftEpics": {
-                                                        "oneOf": [
-                                                            {
-                                                                "type": "string"
-                                                            },
-                                                            {
-                                                                "type": "integer",
-                                                                "format": "int32"
-                                                            }
-                                                        ],
+                                                        "type": "string",
                                                         "description": "草稿史诗"
                                                     },
                                                     "activeEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活史诗"
                                                     },
                                                     "changingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中史诗"
                                                     },
                                                     "reviewingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中史诗"
                                                     },
                                                     "finishedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成史诗"
                                                     },
                                                     "closedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭史诗"
                                                     },
                                                     "totalEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "史诗数"
                                                     },
                                                     "draftRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "草稿用户需求"
                                                     },
                                                     "activeRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活用户需求"
                                                     },
                                                     "changingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中用户需求"
                                                     },
                                                     "reviewingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中用户需求"
                                                     },
                                                     "finishedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成用户需求"
                                                     },
                                                     "closedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭用户需求"
                                                     },
                                                     "totalRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "用户需求数"
                                                     },
                                                     "draftStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "草稿用户故事"
                                                     },
                                                     "activeStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活用户故事"
                                                     },
                                                     "changingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中用户故事"
                                                     },
                                                     "reviewingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中用户故事"
                                                     },
                                                     "finishedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成用户故事"
                                                     },
                                                     "closedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭用户故事"
                                                     },
                                                     "totalStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "用户故事数"
                                                     },
                                                     "unresolvedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "未解决Bug"
                                                     },
                                                     "closedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "关闭Bug"
                                                     },
                                                     "fixedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已修复Bug"
                                                     },
                                                     "totalBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "Bug总数"
                                                     },
                                                     "plans": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "计划数"
                                                     },
                                                     "releases": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "发布数"
                                                     },
                                                     "createdBy": {
@@ -2415,7 +2409,7 @@
                                                         "description": "关闭日期"
                                                     },
                                                     "order": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "排序"
                                                     },
                                                     "vision": {
@@ -2423,7 +2417,7 @@
                                                         "description": "所属界面"
                                                     },
                                                     "deleted": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已删除"
                                                     },
                                                     "lineName": {
@@ -2636,7 +2630,8 @@
                 ]
             }
         },
-        "/products/:productID": {
+        "/products/{productID}": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Product"
@@ -2774,11 +2769,11 @@
                                             "type": "object",
                                             "properties": {
                                                 "id": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "编号"
                                                 },
                                                 "program": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "所属项目集"
                                                 },
                                                 "name": {
@@ -2790,15 +2785,15 @@
                                                     "description": "产品代号"
                                                 },
                                                 "shadow": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "是否影子产品"
                                                 },
                                                 "bind": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "是否独立产品"
                                                 },
                                                 "line": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "产品线"
                                                 },
                                                 "type": {
@@ -2838,7 +2833,7 @@
                                                     "description": "工单负责人"
                                                 },
                                                 "workflowGroup": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                    "type": "string"
                                                 },
                                                 "acl": {
                                                     "type": "string",
@@ -2860,119 +2855,111 @@
                                                     "type": "string"
                                                 },
                                                 "draftEpics": {
-                                                    "oneOf": [
-                                                        {
-                                                            "type": "string"
-                                                        },
-                                                        {
-                                                            "type": "integer",
-                                                            "format": "int32"
-                                                        }
-                                                    ],
+                                                    "type": "string",
                                                     "description": "草稿史诗"
                                                 },
                                                 "activeEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "激活史诗"
                                                 },
                                                 "changingEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "变更中史诗"
                                                 },
                                                 "reviewingEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "评审中史诗"
                                                 },
                                                 "finishedEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已完成史诗"
                                                 },
                                                 "closedEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已关闭史诗"
                                                 },
                                                 "totalEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "史诗数"
                                                 },
                                                 "draftRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "草稿用户需求"
                                                 },
                                                 "activeRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "激活用户需求"
                                                 },
                                                 "changingRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "变更中用户需求"
                                                 },
                                                 "reviewingRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "评审中用户需求"
                                                 },
                                                 "finishedRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已完成用户需求"
                                                 },
                                                 "closedRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已关闭用户需求"
                                                 },
                                                 "totalRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "用户需求数"
                                                 },
                                                 "draftStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "草稿用户故事"
                                                 },
                                                 "activeStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "激活用户故事"
                                                 },
                                                 "changingStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "变更中用户故事"
                                                 },
                                                 "reviewingStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "评审中用户故事"
                                                 },
                                                 "finishedStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已完成用户故事"
                                                 },
                                                 "closedStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已关闭用户故事"
                                                 },
                                                 "totalStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "用户故事数"
                                                 },
                                                 "unresolvedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "未解决Bug"
                                                 },
                                                 "closedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "关闭Bug"
                                                 },
                                                 "fixedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已修复Bug"
                                                 },
                                                 "totalBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "Bug总数"
                                                 },
                                                 "plans": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "计划数"
                                                 },
                                                 "releases": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "发布数"
                                                 },
                                                 "createdBy": {
@@ -2992,7 +2979,7 @@
                                                     "description": "关闭日期"
                                                 },
                                                 "order": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "排序"
                                                 },
                                                 "vision": {
@@ -3000,7 +2987,7 @@
                                                     "description": "所属界面"
                                                 },
                                                 "deleted": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "type": "string",
                                                     "description": "已删除"
                                                 },
                                                 "stories": {
@@ -3172,7 +3159,8 @@
                 ]
             }
         },
-        "/programs/:programID/products": {
+        "/programs/{programID}/products": {
+            "parameters": [{"name": "programID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Product"
@@ -3197,11 +3185,11 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "编号"
                                                     },
                                                     "program": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "所属项目集"
                                                     },
                                                     "name": {
@@ -3213,15 +3201,15 @@
                                                         "description": "产品代号"
                                                     },
                                                     "shadow": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "是否影子产品"
                                                     },
                                                     "bind": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "是否独立产品"
                                                     },
                                                     "line": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "产品线"
                                                     },
                                                     "type": {
@@ -3261,7 +3249,7 @@
                                                         "description": "工单负责人"
                                                     },
                                                     "workflowGroup": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                        "type": "string"
                                                     },
                                                     "acl": {
                                                         "type": "string",
@@ -3283,119 +3271,111 @@
                                                         "type": "string"
                                                     },
                                                     "draftEpics": {
-                                                        "oneOf": [
-                                                            {
-                                                                "type": "string"
-                                                            },
-                                                            {
-                                                                "type": "integer",
-                                                                "format": "int32"
-                                                            }
-                                                        ],
+                                                        "type": "string",
                                                         "description": "草稿史诗"
                                                     },
                                                     "activeEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活史诗"
                                                     },
                                                     "changingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中史诗"
                                                     },
                                                     "reviewingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中史诗"
                                                     },
                                                     "finishedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成史诗"
                                                     },
                                                     "closedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭史诗"
                                                     },
                                                     "totalEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "史诗数"
                                                     },
                                                     "draftRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "草稿用户需求"
                                                     },
                                                     "activeRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活用户需求"
                                                     },
                                                     "changingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中用户需求"
                                                     },
                                                     "reviewingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中用户需求"
                                                     },
                                                     "finishedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成用户需求"
                                                     },
                                                     "closedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭用户需求"
                                                     },
                                                     "totalRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "用户需求数"
                                                     },
                                                     "draftStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "草稿用户故事"
                                                     },
                                                     "activeStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "激活用户故事"
                                                     },
                                                     "changingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "变更中用户故事"
                                                     },
                                                     "reviewingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "评审中用户故事"
                                                     },
                                                     "finishedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已完成用户故事"
                                                     },
                                                     "closedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已关闭用户故事"
                                                     },
                                                     "totalStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "用户故事数"
                                                     },
                                                     "unresolvedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "未解决Bug"
                                                     },
                                                     "closedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "关闭Bug"
                                                     },
                                                     "fixedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已修复Bug"
                                                     },
                                                     "totalBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "Bug总数"
                                                     },
                                                     "plans": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "计划数"
                                                     },
                                                     "releases": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "发布数"
                                                     },
                                                     "createdBy": {
@@ -3415,7 +3395,7 @@
                                                         "description": "关闭日期"
                                                     },
                                                     "order": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "排序"
                                                     },
                                                     "vision": {
@@ -3423,7 +3403,7 @@
                                                         "description": "所属界面"
                                                     },
                                                     "deleted": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "type": "string",
                                                         "description": "已删除"
                                                     },
                                                     "lineName": {
@@ -4209,7 +4189,8 @@
                 ]
             }
         },
-        "/projects/:projectID": {
+        "/projects/{projectID}": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Project"
@@ -4351,7 +4332,8 @@
                 ]
             }
         },
-        "/programs/:programID/projects": {
+        "/programs/{programID}/projects": {
+            "parameters": [{"name": "programID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Project"
@@ -5487,7 +5469,8 @@
                 ]
             }
         },
-        "/executions/:executionID": {
+        "/executions/{executionID}": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Execution"
@@ -6107,7 +6090,8 @@
                 ]
             }
         },
-        "/projects/:projectID/executions": {
+        "/projects/{projectID}/executions": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Execution"
@@ -6713,7 +6697,8 @@
                 }
             }
         },
-        "/productplans/:productplanID": {
+        "/productplans/{productplanID}": {
+            "parameters": [{"name": "productplanID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Productplan"
@@ -6836,7 +6821,8 @@
                 ]
             }
         },
-        "/products/:productID/productplans": {
+        "/products/{productID}/productplans": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Productplan"
@@ -7060,7 +7046,8 @@
                 ]
             }
         },
-        "/productplans/:planID": {
+        "/productplans/{planID}": {
+            "parameters": [{"name": "planID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Productplan"
@@ -7334,7 +7321,8 @@
                 }
             }
         },
-        "/stories/:storyID": {
+        "/stories/{storyID}": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Story"
@@ -7941,7 +7929,8 @@
                 ]
             }
         },
-        "/stories/:storyID/change": {
+        "/stories/{storyID}/change": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Story"
@@ -8021,7 +8010,8 @@
                 }
             }
         },
-        "/products/:productID/stories": {
+        "/products/{productID}/stories": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Story"
@@ -8510,7 +8500,8 @@
                 ]
             }
         },
-        "/projects/:projectID/stories": {
+        "/projects/{projectID}/stories": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Story"
@@ -8980,7 +8971,8 @@
                 ]
             }
         },
-        "/executions/:executionID/stories": {
+        "/executions/{executionID}/stories": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Story"
@@ -9450,7 +9442,8 @@
                 ]
             }
         },
-        "/stories/:storyID/close": {
+        "/stories/{storyID}/close": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Story"
@@ -9514,7 +9507,8 @@
                 }
             }
         },
-        "/stories/:storyID/activate": {
+        "/stories/{storyID}/activate": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Story"
@@ -9699,7 +9693,8 @@
                 }
             }
         },
-        "/epics/:epicID": {
+        "/epics/{epicID}": {
+            "parameters": [{"name": "epicID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Epic"
@@ -9835,7 +9830,8 @@
                 ]
             }
         },
-        "/epics/:epicID/change": {
+        "/epics/{epicID}/change": {
+            "parameters": [{"name": "epicID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Epic"
@@ -9915,7 +9911,8 @@
                 }
             }
         },
-        "/products/:productID/epics": {
+        "/products/{productID}/epics": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Epic"
@@ -10393,7 +10390,8 @@
                 ]
             }
         },
-        "/epics/:storyID": {
+        "/epics/{storyID}": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Epic"
@@ -10867,7 +10865,8 @@
                 ]
             }
         },
-        "/epics/:epicID/close": {
+        "/epics/{epicID}/close": {
+            "parameters": [{"name": "epicID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Epic"
@@ -10931,7 +10930,8 @@
                 }
             }
         },
-        "/epics/:epicID/activate": {
+        "/epics/{epicID}/activate": {
+            "parameters": [{"name": "epicID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Epic"
@@ -11116,7 +11116,8 @@
                 }
             }
         },
-        "/requirements/:requirementID": {
+        "/requirements/{requirementID}": {
+            "parameters": [{"name": "requirementID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Requirement"
@@ -11251,7 +11252,8 @@
                 ]
             }
         },
-        "/requirements/:requirementID/change": {
+        "/requirements/{requirementID}/change": {
+            "parameters": [{"name": "requirementID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Requirement"
@@ -11318,7 +11320,8 @@
                 }
             }
         },
-        "/products/:productID/requirements": {
+        "/products/{productID}/requirements": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Requirement"
@@ -11796,7 +11799,8 @@
                 ]
             }
         },
-        "/requirements/:storyID": {
+        "/requirements/{storyID}": {
+            "parameters": [{"name": "storyID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Requirement"
@@ -12270,7 +12274,8 @@
                 ]
             }
         },
-        "/requirements/:requirementID/close": {
+        "/requirements/{requirementID}/close": {
+            "parameters": [{"name": "requirementID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Requirement"
@@ -12334,7 +12339,8 @@
                 }
             }
         },
-        "/requirements/:requirementID/activate": {
+        "/requirements/{requirementID}/activate": {
+            "parameters": [{"name": "requirementID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Requirement"
@@ -12520,7 +12526,8 @@
                 }
             }
         },
-        "/bugs/:bugID": {
+        "/bugs/{bugID}": {
+            "parameters": [{"name": "bugID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Bug"
@@ -13076,7 +13083,8 @@
                 ]
             }
         },
-        "/products/:productID/bugs": {
+        "/products/{productID}/bugs": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Bug"
@@ -13504,7 +13512,8 @@
                 ]
             }
         },
-        "/projects/:projectID/bugs": {
+        "/projects/{projectID}/bugs": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Bug"
@@ -13917,7 +13926,8 @@
                 ]
             }
         },
-        "/executions/:executionID/bugs": {
+        "/executions/{executionID}/bugs": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Bug"
@@ -14345,7 +14355,8 @@
                 ]
             }
         },
-        "/bugs/:bugID/resolve": {
+        "/bugs/{bugID}/resolve": {
+            "parameters": [{"name": "bugID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Bug"
@@ -14424,7 +14435,8 @@
                 }
             }
         },
-        "/bugs/:bugID/close": {
+        "/bugs/{bugID}/close": {
+            "parameters": [{"name": "bugID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Bug"
@@ -14478,7 +14490,8 @@
                 }
             }
         },
-        "/bugs/:bugID/activate": {
+        "/bugs/{bugID}/activate": {
+            "parameters": [{"name": "bugID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Bug"
@@ -14695,7 +14708,8 @@
                 }
             }
         },
-        "/testcases/:testcasID": {
+        "/testcases/{testcasID}": {
+            "parameters": [{"name": "testcasID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Testcase"
@@ -14851,7 +14865,8 @@
                 ]
             }
         },
-        "/products/:productID/testcases": {
+        "/products/{productID}/testcases": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testcase"
@@ -15233,7 +15248,8 @@
                 ]
             }
         },
-        "/projects/:projectID/testcases": {
+        "/projects/{projectID}/testcases": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testcase"
@@ -15616,7 +15632,8 @@
                 ]
             }
         },
-        "/executions/:executionID/testcases": {
+        "/executions/{executionID}/testcases": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testcase"
@@ -15989,7 +16006,8 @@
                 ]
             }
         },
-        "/testcases/:caseID": {
+        "/testcases/{caseID}": {
+            "parameters": [{"name": "caseID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testcase"
@@ -16588,7 +16606,8 @@
                 }
             }
         },
-        "/tasks/:taskID": {
+        "/tasks/{taskID}": {
+            "parameters": [{"name": "taskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Task"
@@ -16765,7 +16784,8 @@
                 ]
             }
         },
-        "/executions/:executionID/tasks": {
+        "/executions/{executionID}/tasks": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Task"
@@ -17241,7 +17261,8 @@
                 ]
             }
         },
-        "/tasks/:taskID/start": {
+        "/tasks/{taskID}/start": {
+            "parameters": [{"name": "taskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Task"
@@ -17322,7 +17343,8 @@
                 }
             }
         },
-        "/tasks/:taskID/finish": {
+        "/tasks/{taskID}/finish": {
+            "parameters": [{"name": "taskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Task"
@@ -17410,7 +17432,8 @@
                 }
             }
         },
-        "/tasks/:taskID/close": {
+        "/tasks/{taskID}/close": {
+            "parameters": [{"name": "taskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Task"
@@ -17464,7 +17487,8 @@
                 }
             }
         },
-        "/tasks/:taskID/activate": {
+        "/tasks/{taskID}/activate": {
+            "parameters": [{"name": "taskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Task"
@@ -17631,7 +17655,8 @@
                 }
             }
         },
-        "/feedbacks/:feedbackID": {
+        "/feedbacks/{feedbackID}": {
+            "parameters": [{"name": "feedbackID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Feedback"
@@ -18017,7 +18042,8 @@
                 ]
             }
         },
-        "/products/:productID/feedbacks": {
+        "/products/{productID}/feedbacks": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Feedback"
@@ -18309,7 +18335,8 @@
                 ]
             }
         },
-        "/feedbacks/:feedbackID/close": {
+        "/feedbacks/{feedbackID}/close": {
+            "parameters": [{"name": "feedbackID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Feedback"
@@ -18373,7 +18400,8 @@
                 }
             }
         },
-        "/feedbacks/:feedbackID/activate": {
+        "/feedbacks/{feedbackID}/activate": {
+            "parameters": [{"name": "feedbackID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Feedback"
@@ -18544,7 +18572,8 @@
                 }
             }
         },
-        "/tickets/:ticketID": {
+        "/tickets/{ticketID}": {
+            "parameters": [{"name": "ticketID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Ticket"
@@ -18941,7 +18970,8 @@
                 ]
             }
         },
-        "/products/:productID/tickets": {
+        "/products/{productID}/tickets": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Ticket"
@@ -19239,7 +19269,8 @@
                 ]
             }
         },
-        "/tickets/:ticketID/close": {
+        "/tickets/{ticketID}/close": {
+            "parameters": [{"name": "ticketID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Ticket"
@@ -19305,7 +19336,8 @@
                 }
             }
         },
-        "/tickets/:ticketID/activate": {
+        "/tickets/{ticketID}/activate": {
+            "parameters": [{"name": "ticketID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Ticket"
@@ -19454,7 +19486,8 @@
                 }
             }
         },
-        "/systems/:systemID": {
+        "/systems/{systemID}": {
+            "parameters": [{"name": "systemID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "System"
@@ -19528,7 +19561,8 @@
                 }
             }
         },
-        "/products/:productID/systems": {
+        "/products/{productID}/systems": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "System"
@@ -19681,7 +19715,8 @@
                 }
             }
         },
-        "/builds/:buildID": {
+        "/builds/{buildID}": {
+            "parameters": [{"name": "buildID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Build"
@@ -19825,7 +19860,8 @@
                 ]
             }
         },
-        "/projects/:projectID/builds": {
+        "/projects/{projectID}/builds": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Build"
@@ -20037,7 +20073,8 @@
                 ]
             }
         },
-        "/executions/:executionID/builds": {
+        "/executions/{executionID}/builds": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Build"
@@ -20359,7 +20396,8 @@
                 }
             }
         },
-        "/testtasks/:testtaskID": {
+        "/testtasks/{testtaskID}": {
+            "parameters": [{"name": "testtaskID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Testtask"
@@ -20505,7 +20543,8 @@
                 ]
             }
         },
-        "/products/:productID/testtasks": {
+        "/products/{productID}/testtasks": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testtask"
@@ -20711,7 +20750,8 @@
                 ]
             }
         },
-        "/projects/:projectID/testtasks": {
+        "/projects/{projectID}/testtasks": {
+            "parameters": [{"name": "projectID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testtask"
@@ -20930,7 +20970,8 @@
                 ]
             }
         },
-        "/executions/:executionID/testtasks": {
+        "/executions/{executionID}/testtasks": {
+            "parameters": [{"name": "executionID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Testtask"
@@ -21245,7 +21286,8 @@
                 }
             }
         },
-        "/releases/:releasID": {
+        "/releases/{releasID}": {
+            "parameters": [{"name": "releasID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "put": {
                 "tags": [
                     "Release"
@@ -21375,7 +21417,8 @@
                 ]
             }
         },
-        "/products/:productID/releases": {
+        "/products/{productID}/releases": {
+            "parameters": [{"name": "productID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "get": {
                 "tags": [
                     "Release"
@@ -21671,7 +21714,8 @@
                 }
             }
         },
-        "/files/:fileID": {
+        "/files/{fileID}": {
+            "parameters": [{"name": "fileID", "in": "path", "required": true, "schema": {"type": "string"}}],
             "delete": {
                 "tags": [
                     "File"
