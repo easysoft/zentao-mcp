@@ -47,17 +47,11 @@ func (c *Controller) registerTool(ctx context.Context, server *mcpsdk.Server, td
 		"path", td.Path,
 	)
 
-	t := &mcpsdk.Tool{
+	mcpsdk.AddTool(server, &mcpsdk.Tool{
 		Name:        td.OperationID,
 		Description: td.Description,
 		InputSchema: td.InputSchema,
-	}
-
-	if td.OutputSchema != nil {
-		t.OutputSchema = compatibleOutputSchema(td.OutputSchema)
-	}
-
-	mcpsdk.AddTool(server, t, c.toolHandler(td))
+	}, c.toolHandler(td))
 }
 
 func (c *Controller) toolHandler(td *models.ToolDefinition) func(context.Context, *mcpsdk.CallToolRequest, map[string]any) (*mcpsdk.CallToolResult, any, error) {

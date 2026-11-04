@@ -57,6 +57,7 @@ func (s *Service) Execute(ctx context.Context, td *models.ToolDefinition, in map
 			q.Add(p.Name, fmt.Sprint(v))
 		}
 	}
+	applyListFilterAlias(td.Method, td.Path, q)
 	applyExecutionTaskFilterAlias(td.Method, td.Path, q)
 
 	u.RawQuery = q.Encode()
