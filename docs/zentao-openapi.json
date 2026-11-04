@@ -2197,11 +2197,27 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "编号"
                                                     },
                                                     "program": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "所属项目集"
                                                     },
                                                     "name": {
@@ -2213,15 +2229,39 @@
                                                         "description": "产品代号"
                                                     },
                                                     "shadow": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "是否影子产品"
                                                     },
                                                     "bind": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "是否独立产品"
                                                     },
                                                     "line": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "产品线"
                                                     },
                                                     "type": {
@@ -2261,7 +2301,15 @@
                                                         "description": "工单负责人"
                                                     },
                                                     "workflowGroup": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ]
                                                     },
                                                     "acl": {
                                                         "type": "string",
@@ -2295,107 +2343,315 @@
                                                         "description": "草稿史诗"
                                                     },
                                                     "activeEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活史诗"
                                                     },
                                                     "changingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中史诗"
                                                     },
                                                     "reviewingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中史诗"
                                                     },
                                                     "finishedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成史诗"
                                                     },
                                                     "closedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭史诗"
                                                     },
                                                     "totalEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "史诗数"
                                                     },
                                                     "draftRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "草稿用户需求"
                                                     },
                                                     "activeRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活用户需求"
                                                     },
                                                     "changingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中用户需求"
                                                     },
                                                     "reviewingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中用户需求"
                                                     },
                                                     "finishedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成用户需求"
                                                     },
                                                     "closedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭用户需求"
                                                     },
                                                     "totalRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "用户需求数"
                                                     },
                                                     "draftStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "草稿用户故事"
                                                     },
                                                     "activeStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活用户故事"
                                                     },
                                                     "changingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中用户故事"
                                                     },
                                                     "reviewingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中用户故事"
                                                     },
                                                     "finishedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成用户故事"
                                                     },
                                                     "closedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭用户故事"
                                                     },
                                                     "totalStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "用户故事数"
                                                     },
                                                     "unresolvedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "未解决Bug"
                                                     },
                                                     "closedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "关闭Bug"
                                                     },
                                                     "fixedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已修复Bug"
                                                     },
                                                     "totalBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "Bug总数"
                                                     },
                                                     "plans": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "计划数"
                                                     },
                                                     "releases": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "发布数"
                                                     },
                                                     "createdBy": {
@@ -2415,7 +2671,15 @@
                                                         "description": "关闭日期"
                                                     },
                                                     "order": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "排序"
                                                     },
                                                     "vision": {
@@ -2423,7 +2687,15 @@
                                                         "description": "所属界面"
                                                     },
                                                     "deleted": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已删除"
                                                     },
                                                     "lineName": {
@@ -2774,11 +3046,27 @@
                                             "type": "object",
                                             "properties": {
                                                 "id": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "编号"
                                                 },
                                                 "program": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "所属项目集"
                                                 },
                                                 "name": {
@@ -2790,15 +3078,39 @@
                                                     "description": "产品代号"
                                                 },
                                                 "shadow": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "是否影子产品"
                                                 },
                                                 "bind": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "是否独立产品"
                                                 },
                                                 "line": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "产品线"
                                                 },
                                                 "type": {
@@ -2838,7 +3150,15 @@
                                                     "description": "工单负责人"
                                                 },
                                                 "workflowGroup": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ]
                                                 },
                                                 "acl": {
                                                     "type": "string",
@@ -2872,107 +3192,315 @@
                                                     "description": "草稿史诗"
                                                 },
                                                 "activeEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "激活史诗"
                                                 },
                                                 "changingEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "变更中史诗"
                                                 },
                                                 "reviewingEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "评审中史诗"
                                                 },
                                                 "finishedEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已完成史诗"
                                                 },
                                                 "closedEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已关闭史诗"
                                                 },
                                                 "totalEpics": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "史诗数"
                                                 },
                                                 "draftRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "草稿用户需求"
                                                 },
                                                 "activeRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "激活用户需求"
                                                 },
                                                 "changingRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "变更中用户需求"
                                                 },
                                                 "reviewingRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "评审中用户需求"
                                                 },
                                                 "finishedRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已完成用户需求"
                                                 },
                                                 "closedRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已关闭用户需求"
                                                 },
                                                 "totalRequirements": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "用户需求数"
                                                 },
                                                 "draftStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "草稿用户故事"
                                                 },
                                                 "activeStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "激活用户故事"
                                                 },
                                                 "changingStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "变更中用户故事"
                                                 },
                                                 "reviewingStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "评审中用户故事"
                                                 },
                                                 "finishedStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已完成用户故事"
                                                 },
                                                 "closedStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已关闭用户故事"
                                                 },
                                                 "totalStories": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "用户故事数"
                                                 },
                                                 "unresolvedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "未解决Bug"
                                                 },
                                                 "closedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "关闭Bug"
                                                 },
                                                 "fixedBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已修复Bug"
                                                 },
                                                 "totalBugs": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "Bug总数"
                                                 },
                                                 "plans": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "计划数"
                                                 },
                                                 "releases": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "发布数"
                                                 },
                                                 "createdBy": {
@@ -2992,7 +3520,15 @@
                                                     "description": "关闭日期"
                                                 },
                                                 "order": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "排序"
                                                 },
                                                 "vision": {
@@ -3000,7 +3536,15 @@
                                                     "description": "所属界面"
                                                 },
                                                 "deleted": {
-                                                    "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "type": "integer",
+                                                            "format": "int32"
+                                                        }
+                                                    ],
                                                     "description": "已删除"
                                                 },
                                                 "stories": {
@@ -3197,11 +3741,27 @@
                                                 "type": "object",
                                                 "properties": {
                                                     "id": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "编号"
                                                     },
                                                     "program": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "所属项目集"
                                                     },
                                                     "name": {
@@ -3213,15 +3773,39 @@
                                                         "description": "产品代号"
                                                     },
                                                     "shadow": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "是否影子产品"
                                                     },
                                                     "bind": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "是否独立产品"
                                                     },
                                                     "line": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "产品线"
                                                     },
                                                     "type": {
@@ -3261,7 +3845,15 @@
                                                         "description": "工单负责人"
                                                     },
                                                     "workflowGroup": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}]
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ]
                                                     },
                                                     "acl": {
                                                         "type": "string",
@@ -3295,107 +3887,315 @@
                                                         "description": "草稿史诗"
                                                     },
                                                     "activeEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活史诗"
                                                     },
                                                     "changingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中史诗"
                                                     },
                                                     "reviewingEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中史诗"
                                                     },
                                                     "finishedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成史诗"
                                                     },
                                                     "closedEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭史诗"
                                                     },
                                                     "totalEpics": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "史诗数"
                                                     },
                                                     "draftRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "草稿用户需求"
                                                     },
                                                     "activeRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活用户需求"
                                                     },
                                                     "changingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中用户需求"
                                                     },
                                                     "reviewingRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中用户需求"
                                                     },
                                                     "finishedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成用户需求"
                                                     },
                                                     "closedRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭用户需求"
                                                     },
                                                     "totalRequirements": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "用户需求数"
                                                     },
                                                     "draftStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "草稿用户故事"
                                                     },
                                                     "activeStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "激活用户故事"
                                                     },
                                                     "changingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "变更中用户故事"
                                                     },
                                                     "reviewingStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "评审中用户故事"
                                                     },
                                                     "finishedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已完成用户故事"
                                                     },
                                                     "closedStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已关闭用户故事"
                                                     },
                                                     "totalStories": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "用户故事数"
                                                     },
                                                     "unresolvedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "未解决Bug"
                                                     },
                                                     "closedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "关闭Bug"
                                                     },
                                                     "fixedBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已修复Bug"
                                                     },
                                                     "totalBugs": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "Bug总数"
                                                     },
                                                     "plans": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "计划数"
                                                     },
                                                     "releases": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "发布数"
                                                     },
                                                     "createdBy": {
@@ -3415,7 +4215,15 @@
                                                         "description": "关闭日期"
                                                     },
                                                     "order": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "排序"
                                                     },
                                                     "vision": {
@@ -3423,7 +4231,15 @@
                                                         "description": "所属界面"
                                                     },
                                                     "deleted": {
-                                                        "oneOf": [{"type": "string"}, {"type": "integer", "format": "int32"}],
+                                                        "oneOf": [
+                                                            {
+                                                                "type": "string"
+                                                            },
+                                                            {
+                                                                "type": "integer",
+                                                                "format": "int32"
+                                                            }
+                                                        ],
                                                         "description": "已删除"
                                                     },
                                                     "lineName": {
@@ -5938,19 +6754,16 @@
                                                     "description": "可用工时"
                                                 },
                                                 "totalEstimate": {
-                                                    "type": "integer",
-                                                    "description": "预计",
-                                                    "format": "int32"
+                                                    "type": "number",
+                                                    "description": "预计"
                                                 },
                                                 "totalConsumed": {
-                                                    "type": "integer",
-                                                    "description": "消耗",
-                                                    "format": "int32"
+                                                    "type": "number",
+                                                    "description": "消耗"
                                                 },
                                                 "totalLeft": {
-                                                    "type": "integer",
-                                                    "description": "剩余",
-                                                    "format": "int32"
+                                                    "type": "number",
+                                                    "description": "剩余"
                                                 },
                                                 "isParent": {
                                                     "type": "integer",
@@ -21707,6 +22520,556 @@
                         "TokenAuth": []
                     }
                 ]
+            }
+        },
+        "/testtasks/{id}/cases": {
+            "get": {
+                "operationId": "get_testtasks_id_cases",
+                "summary": "分页读取测试单原生执行记录，包括run ID、用例版本与执行状态。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "testtask": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "total": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "page": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "limit": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "runs": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "task": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "case": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "version": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "task",
+                                                    "case",
+                                                    "version"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "testtask",
+                                        "total",
+                                        "page",
+                                        "limit",
+                                        "runs"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "operationId": "post_testtasks_id_cases",
+                "summary": "关联1—100个用例的明确版本。已存在同版本关联保持原run ID和结果，不升级或重置；不同版本返回409。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "testtask": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "runs": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "task": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "case": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    },
+                                                    "version": {
+                                                        "type": "integer",
+                                                        "minimum": 1
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "task",
+                                                    "case",
+                                                    "version"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "testtask",
+                                        "runs"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "cases": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "case": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "version": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "case",
+                                                "version"
+                                            ]
+                                        },
+                                        "minItems": 1,
+                                        "maxItems": 100
+                                    }
+                                },
+                                "required": [
+                                    "cases"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/testtasks/{id}/cases/{caseID}/results": {
+            "get": {
+                "operationId": "get_testtasks_id_cases_caseID_results",
+                "summary": "读取该测试单原生run的历史执行结果；未关联返回409。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "caseID",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "results": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "results"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "operationId": "post_testtasks_id_cases_caseID_results",
+                "summary": "登记该测试单已关联用例的完整步骤结果，版本必须与run一致。创建新结果，不修改历史；异常响应先回读禁止盲重放。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "caseID",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "enum": [
+                                                "success"
+                                            ]
+                                        },
+                                        "resultID": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "runID": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "testtask": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "case": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "version": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        }
+                                    },
+                                    "required": [
+                                        "status",
+                                        "resultID",
+                                        "runID",
+                                        "testtask",
+                                        "case",
+                                        "version"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "version": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "steps": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "result": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "pass",
+                                                        "fail",
+                                                        "blocked",
+                                                        "n/a"
+                                                    ]
+                                                },
+                                                "real": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "result",
+                                                "real"
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "version",
+                                    "steps"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/testcases/{id}/results": {
+            "get": {
+                "operationId": "get_testcases_id_results",
+                "summary": "读取用例执行历史，runID可过滤原生测试单执行。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    },
+                    {
+                        "name": "runID",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "results": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "results"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "operationId": "post_testcases_id_results",
+                "summary": "登记完整步骤结果。JSON中的testtask/version生效；testtask>0必须已有原生run，未指定仍为独立结果run0。",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "minimum": 1
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "原生关系/结果，必须回读核对",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string",
+                                            "enum": [
+                                                "success"
+                                            ]
+                                        },
+                                        "resultID": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "runID": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "testtask": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "case": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        },
+                                        "version": {
+                                            "type": "integer",
+                                            "minimum": 1
+                                        }
+                                    },
+                                    "required": [
+                                        "status",
+                                        "resultID",
+                                        "runID",
+                                        "testtask",
+                                        "case",
+                                        "version"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "testtask": {
+                                        "type": "integer",
+                                        "minimum": 0
+                                    },
+                                    "version": {
+                                        "type": "integer",
+                                        "minimum": 1
+                                    },
+                                    "steps": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "result": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "pass",
+                                                        "fail",
+                                                        "blocked",
+                                                        "n/a"
+                                                    ]
+                                                },
+                                                "real": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "result",
+                                                "real"
+                                            ]
+                                        },
+                                        "minItems": 1
+                                    }
+                                },
+                                "required": [
+                                    "steps"
+                                ]
+                            }
+                        }
+                    }
+                }
             }
         }
     },

@@ -8,6 +8,7 @@ import (
 const redactedValue = "[REDACTED]"
 
 var sensitiveKeys = map[string]struct{}{
+	"payload":       {},
 	"access_token":  {},
 	"api_key":       {},
 	"apikey":        {},
