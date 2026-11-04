@@ -57,8 +57,8 @@ func (s *Service) Execute(ctx context.Context, td *models.ToolDefinition, in map
 			q.Add(p.Name, fmt.Sprint(v))
 		}
 	}
-
 	applyExecutionTaskFilterAlias(td.Method, td.Path, q)
+
 	u.RawQuery = q.Encode()
 
 	s.logger.InfoContext(ctx, "upstream request prepared",
