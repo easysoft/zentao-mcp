@@ -18117,9 +18117,16 @@
                 ],
                 "parameters": [
                     {
+                        "name": "browseType",
+                        "in": "query",
+                        "description": "任务筛选，默认 unclosed；all 全部，closed 已关闭，wait 未开始，doing 进行中，done 已完成，cancel 已取消，assignedtome 指派给我，myinvolved 由我参与，assignedbyme 由我指派。",
+                        "required": false,
+                        "schema": { "type": "string" }
+                    },
+                    {
                         "name": "status",
                         "in": "query",
-                        "description": "状态，默认是unclosed。(all 全部 | unclosed 未关闭 | assignedtome 指派给我 | assignedtome 指派给我 | myinvolved 由我参与 | assignedbyme 由我指派)",
+                        "description": "browseType 的兼容别名；同时提供时以非空 browseType 为准。",
                         "required": false,
                         "schema": {
                             "type": "string"
