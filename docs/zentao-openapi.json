@@ -17776,8 +17776,11 @@
                                                         "description": "预计剩余"
                                                     },
                                                     "deadline": {
-                                                        "type": "string",
-                                                        "description": "截止日期"
+                                                        "description": "截止日期",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "status": {
                                                         "type": "string",
@@ -17824,20 +17827,29 @@
                                                         "description": "指派日期"
                                                     },
                                                     "estStarted": {
-                                                        "type": "string",
-                                                        "description": "预计开始"
+                                                        "description": "预计开始",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "realStarted": {
-                                                        "type": "string",
-                                                        "description": "实际开始"
+                                                        "description": "实际开始",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "finishedBy": {
                                                         "type": "string",
                                                         "description": "由谁完成"
                                                     },
                                                     "finishedDate": {
-                                                        "type": "string",
-                                                        "description": "实际完成"
+                                                        "description": "实际完成",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "finishedList": {
                                                         "type": "string",
@@ -17848,16 +17860,22 @@
                                                         "description": "由谁取消"
                                                     },
                                                     "canceledDate": {
-                                                        "type": "string",
-                                                        "description": "取消时间"
+                                                        "description": "取消时间",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "closedBy": {
                                                         "type": "string",
                                                         "description": "由谁关闭"
                                                     },
                                                     "closedDate": {
-                                                        "type": "string",
-                                                        "description": "关闭时间"
+                                                        "description": "关闭时间",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "planDuration": {
                                                         "type": "string",
@@ -17880,8 +17898,11 @@
                                                         "description": "最后修改日期"
                                                     },
                                                     "activatedDate": {
-                                                        "type": "string",
-                                                        "description": "激活日期"
+                                                        "description": "激活日期",
+                                                        "anyOf": [
+                                                            { "type": "string" },
+                                                            { "nullable": true, "enum": [null] }
+                                                        ]
                                                     },
                                                     "order": {
                                                         "type": "string",
